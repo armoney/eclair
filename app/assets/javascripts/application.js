@@ -33,7 +33,7 @@ $(document).ready(function() {
     })
 
     request.done(function(response) {
-
+      console.log(response + '888888888888888');
       function getLabels() {
         return [
           "$" + response.graph[1].cost + " January",
@@ -64,7 +64,7 @@ $(document).ready(function() {
       }
       console.log(colorArray)
       function getBackgroundColor() {
-      console.log(colorArray)     
+      console.log(colorArray)
         return colorArray;
       }
       function getHoverBackgroundColor() {
@@ -106,33 +106,35 @@ $(document).ready(function() {
   }
 
 // initializeCostEstimateGraph();
- function loadGraphWhenInView() {
-   // init controller
- var controller = new ScrollMagic.Controller();
+//  function loadGraphWhenInView() {
+//    // init controller
+//  var controller = new ScrollMagic.Controller();
+//
+// //  // build scene
+//  var scene = new ScrollMagic.Scene({triggerElement: ".features", duration: 200, offset: 0})
+//  				.addTo(controller)
+//         .setPin("#graph")
+//  				// .addIndicators() // add indicators (requires plugin)
+//  				.on("update", function (e) {
+//  					$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
+//  				})
+//  				.on("enter leave", function (e) {
+//            if (e.type == "enter") {
+//              initializeCostEstimateGraph();
+//            }
+//  					$("#state").text(e.type == "enter" ? "inside" : "outside");
+//  				})
+//  				.on("start end", function (e) {
+//  					$("#lastHit").text(e.type == "start" ? "top" : "bottom");
+//  				})
+//  				.on("progress", function (e) {
+//  					$("#progress").text(e.progress.toFixed(3));
+//  				});
+//  }
 
-//  // build scene
- var scene = new ScrollMagic.Scene({triggerElement: ".features", duration: 200, offset: 0})
- 				.addTo(controller)
-         .setPin("#graph")
- 				// .addIndicators() // add indicators (requires plugin)
- 				.on("update", function (e) {
- 					$("#scrollDirection").text(e.target.controller().info("scrollDirection"));
- 				})
- 				.on("enter leave", function (e) {
-           if (e.type == "enter") {
-             initializeCostEstimateGraph();
-           }
- 					$("#state").text(e.type == "enter" ? "inside" : "outside");
- 				})
- 				.on("start end", function (e) {
- 					$("#lastHit").text(e.type == "start" ? "top" : "bottom");
- 				})
- 				.on("progress", function (e) {
- 					$("#progress").text(e.progress.toFixed(3));
- 				});
- }
-
-  loadGraphWhenInView();
+ initializeCostEstimateGraph();
+  //
+  // loadGraphWhenInView();
 
 });
 

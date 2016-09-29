@@ -6,11 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-drug_list = [  
-              # "zometa",
+drug_list = [ 
+              "zometa",
               "singulair",
-              "vytorin",
-              "lisinopril",
               "simvastatin",
               "metformin",
               "alendronate",
@@ -18,8 +16,7 @@ drug_list = [
               "levothyroxine",
               "sertraline",
               "hydrochlorothiazide",
-              "metoprolol",
-              # "isosorbide mononitrate"
+              "metoprolol"
             ]
 
 
